@@ -66,7 +66,7 @@ def fees_report(infile, outfile):
     
     with open(outfile, mode='w', newline='') as output_file:
         keys = ['patron_id', 'late_fees']
-        writer = csv.DictWriter(output_file, keys=keys)
+        writer = csv.DictWriter(output_file, fieldnames=keys)
         writer.writeheader()
         
         for patron_id, late_fee in late_fees_dict.items():
