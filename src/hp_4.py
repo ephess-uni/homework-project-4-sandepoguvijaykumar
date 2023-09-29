@@ -50,7 +50,7 @@ def fees_report(infile, outfile):
     late_fees_dict = defaultdict(float)
     
     with open(infile, mode='r', newline='') as input_file:
-        csv_reader = csv.DictReader(file)
+        csv_reader = csv.DictReader(input_file)
         
         for each in csv_reader:
             date_checkout = datetime.strptime(each['date_checkout'], '%m/%d/%Y')
