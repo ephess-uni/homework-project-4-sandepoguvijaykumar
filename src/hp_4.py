@@ -10,7 +10,7 @@ def reformat_dates(old_dates):
     element to a format dd mmm yyyy--01 Jan 2001."""
     formatted_dates = []
 
-    for date_str in date_list:
+    for date_str in old_dates:
         date_object = datetime.strptime(date_str, '%Y-%m-%d')
         formatted_date = date_object.strftime('%d %b %Y')
         formatted_dates.append(formatted_date)
